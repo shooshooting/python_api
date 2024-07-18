@@ -17,11 +17,6 @@ python_api/
 └── requirements.txt
 ```
 
-- `api/__init__.py`: Initializes the API module.
-- `api/dataset.json`: The JSON file containing the data to be served by the API.
-- `api/main.py`: The main FastAPI application.
-- `api/test_main.py`: Tests for the main API application.
-- `Podmanfile`: Configuration file for building the Podman container.
 - `requirements.txt`: List of dependencies required by the project.
 
 
@@ -44,19 +39,19 @@ podman build -t python_api -f Podmanfile .
 podman run -d -p 8000:8000 python_api
 ```
 
-3. Check logs:
+3. check logs:
 
 ```sh
 podman logs <container_id>
 ```
 
-4. Access API endpoint:
+4. endpoint:
 
 ```sh
 curl http://localhost:8000/api/data
 ```
 
-5. Access the container's shell:
+5. c's shell:
 
 ```sh
 podman exec -it <container_id> /bin/sh
